@@ -20,4 +20,4 @@ RUN pip install -r requirements.txt
 EXPOSE 8080
 
 # Run app.py when the container launches
-CMD ["python", "service.py"]
+CMD ["uvicorn", "service:app", "--host", "0.0.0.0", "--port", "8080"]
